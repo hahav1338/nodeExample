@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seajs案例1</title>
+</head>
+<body>
+<input type="text" id = "seajstext">
+<script src="sea.js"></script>
+<script>
+    var seajstext = document.getElementById('seajstext');
+        //加载模块，这样main中就可以使用seajstext了
+      seajs.use('./main');
+</script>
+</body>
+</html>

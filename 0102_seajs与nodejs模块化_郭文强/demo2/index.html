@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>使用模块加载器seajs的模块化</h1>
+<p>使用模块加载器时，只要加载一个seajs就可以了</p>
+<p>运行结果:</p>
+<p id="result"></p>
+<script type="text/javascript" src="javascript/sea.js"></script>
+<script>
+    seajs.use(["./javascript/module1","./javascript/jquery.min.js"],function(module1,jquery){
+        $("#result").text(module1.run())
+    })
+</script>
+</body>
+</html>

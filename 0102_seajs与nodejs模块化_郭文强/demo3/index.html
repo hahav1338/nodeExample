@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seajs案例1</title>
+</head>
+<body>
+<input type="text" id = "seajstext">
+<script src="javascript/sea/sea.js"></script>
+<script>
+    //定义seajs的基本配置
+    seajs.config({
+        base: "./javascript/sea-modules/",// Sea.js 的基础路径
+        alias: {
+            "jquery": "../jquery/jquery.min.js"// 别名配置（用变量表示文件，解决路径层级过深和实现路径映射）
+        }
+    });
+    seajs.use('main.js');
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>不用模块加载器的模块化</h1>
+<p>不用模块加载器时，每加载一个模块都要写一个script标签引入js文件</p>
+<p>运行结果:</p>
+<p id="result"></p>
+<script type="text/javascript" src="javascript/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/module3.js"></script>
+<script type="text/javascript" src="javascript/module2.js"></script>
+<script type="text/javascript" src="javascript/module1.js"></script>
+<script>
+   $("#result").text(module1.run())
+</script>
+</body>
+</html>

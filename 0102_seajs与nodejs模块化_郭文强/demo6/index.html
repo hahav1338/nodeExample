@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seajs案例1</title>
+    <style>
+        #box{
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+            background: #f00;
+        }
+        #btn{
+        font-size: 20px;
+        }
+    </style>
+
+
+</head>
+<body>
+<h1>seajs的模块化的显示与隐藏在模块加载完成执行初始化</h1>
+<button id="btn">操作按钮</button>
+<div id="box"></div>
+<script src="sea.js"></script>
+<script>
+    //定义seajs的基本配置
+    seajs.config({
+        alias: {// 别名配置（用变量表示文件，解决路径层级过深和实现路径映射）
+            "jquery": "jquery.min.js"
+        }
+    });
+    //加载模块
+    seajs.use("./handle.js",function(handle){//加在完成后执行回调 里面的参数是加载的模块
+        handle();//执行hander的初始化
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="title">当前为get方式提交</h1>
+<form action="/index" method="get" id="form">
+    <input type="submit" value="提交">
+</form>
+<input type="button" value="切换提交方法get/post" id="btn">
+
+<script>
+
+    var title = document.getElementById("title");
+    var form = document.getElementById("form");
+    var btn = document.getElementById("btn");
+    //点击切换form的提交方法
+    btn.onclick = function () {
+        var moethod = form.method = form.method === "get" ? "post" : "get";
+        title.innerHTML = "当前为" + moethod + "方式提交";
+    }
+
+
+</script>
+
+</body>
+</html>
